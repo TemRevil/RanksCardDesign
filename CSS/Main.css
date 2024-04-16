@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #EDF2F7;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'Exo';
+    font-weight: 300;
+    src: url(../Fonts/Exo/static/Exo2-Regular.ttf);
+}
+@font-face {
+    font-family: 'Exo';
+    font-weight: 700;
+    src: url(../Fonts/Exo/static/Exo2-Bold.ttf);
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}
+.space-1 {
+    justify-content: space-around;
+}
+.space-2 {
+    justify-content: space-between;
+}
+.space-3 {
+    justify-content: space-evenly;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.row {
+    flex-direction: row;
+}
+.col {
+    flex-direction: column;
+}
+
+.title {
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    font-family: 'Exo', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    color: #123;
+    background-color: white;
+}
+.text {
+    font-family: 'Exo', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #123;
+}
+.transisiton {
+    transition: 0.2s 0s linear;
+}
+
+/* ---------------------------------------- */
+/* Texture */
+.tx {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+.texture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+/* ---------------------------------------- */
+/* Main Content */
+.content {
+    width: 100%;
+    height: 100vh;
+    gap: 20px;
+}
+
+.card {
+    width: 320px;
+    height: 500px;
+    padding: 0px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px #1234564b;
+    overflow: auto;
+}
+.card::-webkit-scrollbar {
+    width: 6px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.card::-webkit-scrollbar-track {
+    background: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.card::-webkit-scrollbar-thumb {
+    background-color: #3395ff;
+    border-radius: 20px;
+}
+
+ul {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    gap: 13px;
+    position: sticky;
+    top: 50px;
+    background-color: white;
+    list-style: none;
+}
+
+.img {
+    width: 80px;
+    height: 60px;
+    background-color: #EDF2F7;
+    border-radius: 5px;
+    transition: 0.2s 0s linear;
+}
+.img:hover {
+    scale: 1.2;
+}
+.name {
+    width: 90%;
+}
+.money {
+    color: #00d30b;
+}
+/* ---------------------------------------- */
+/* Media */
+@media (max-width: 1366px) {
+    body {
+        padding: 20px;
+    }
+}
+@media (max-width: 400px) {
+    .card {
+        width: 240px;
+    }
+}
